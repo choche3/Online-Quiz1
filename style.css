@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    width: 100%;
+    background: transparent;
+    position: relative;
+    top: 0;
+    left: 90;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 80;
+    padding: 2px 100px;
+    transition: background-color 0.3s ease;
+    
+
+    
+}
+
+
+.header.scrolled {
+    background-color: #ffffff; /* Change the background color on scroll */
+}
+
+.logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    pointer-events: none;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: text-shadow 0.3s ease;
+}
+
+.logo:hover {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 40px;
+}
+
+.navbar a:hover {
+    color: #f1f1f1;
+    /* Add a subtle background transition */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Add a smooth color transition */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar .btnLogin-popup {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.navbar .btnLogin-popup::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    opacity: 0.85;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu.active {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.mobile-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px)
+ {
+    .header {
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    }
+
+    .navbar a {
+    margin-bottom: 10px;
+    }
+
+    .navbar.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: pink;
+        padding: 20px;
+    }
+}
+
+.section {
+    min-height: 100vh;
+    background: url('images/stars.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+.wrapper .logreg-box{
+    width: 90%;
+}
+
+.logreg-box .logreg-title {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+
+.logreg-title h2{
+    font-size: 24px;
+    
+}
+
+.logreg-title p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.logreg-box .input-box {
+    position: relative;
+    width: 100%;
+    height: px;
+    margin: 50px 0;
+    border-bottom: 2px solid #fff;
+}
+
+
+
+.input-box label {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: translateY(10%);
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 19px;
+    color: #fff;
+}
+
+.logreg-box .logreg-forgot {
+    font-size: 14.5px;
+    color: #fff;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    color: #fff;
+    margin-right: 6px;
+}
+
+.remember-forgot a {
+    font-size: 14;
+    color:#fff;
+    text-decoration: white;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline; 
+    color: #fff;   
+}
+
+.logreg-box .btn {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow:  2px 2px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.logreg-box .logreg-link {
+    font-size: 14.5px;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.logreg-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.logreg-link a:hover {
+    text-decoration: underline;
+}
+
+.media-options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.media-options a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    margin: 8% 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    border-radius: 40px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+
+    width: 200%;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 40px;
+    box-shadow:  2px 2px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.media-options a i{
+    font-size: 18px;
+    margin: 0 8px 1% 0;
+}
+
+.media-options a:hover {
+    background: rgba(255, 255, 255, .1);
+}
+
+.media-options a span {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+/* ... (previous CSS rules) ... */
+
+.wrapper {
+    position: center;
+    top: 0;
+    right: 0;
+    max-width: 400px; /* Reduced the max width */
+    width: 100%;
+    margin: 70px auto;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    box-shadow: -1px 0 10px rgba(0, 0, 0, 0.2);
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px; /* Reduced the padding */
+    border-radius: 10px; /* Added border radius for a modern look */
+}
+
+.logreg-box {
+    width: 100%;
+    max-width: 300px; /* Reduced the max width */
+}
+
+.logreg-box .logreg-title {
+    text-align: center;
+    margin-bottom: 30px; /* Reduced the margin */
+    color: #fff;
+}
+
+.logreg-title h2 {
+    font-size: 26px; /* Reduced the font size */
+}
+
+.logreg-title p {
+    font-size: 12px; /* Reduced the font size */
+    font-weight: 500;
+}
+
+.logreg-box .input-box {
+    position: relative;
+    width: 100%;
+    height: 40px; /* Reduced the height */
+    margin: 15px 2; /* Reduced the margin */
+    border-bottom: 2px solid #fff;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px; /* Reduced the font size */
+    padding: 5px; /* Reduced the padding */
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-30%);
+    font-size: 14px; /* Reduced the font size */
+    color: #fff;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* ... (remaining CSS rules) ... */
+
+

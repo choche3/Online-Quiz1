@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function add(x, y){
+            return x + y;
+        }
+        function sub(x, y){
+            return x - y;
+        }
+        function mul(x, y){
+            return x * y;
+        }
+        function div(x, y){
+            return x / y;
+        }
+
+        function calc(){
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var operation = document.getElementById("operation").value;
+            var resultElement = document.getElementById("result");
+        
+        var result;
+        if(operation == "add"){
+            result = add(num1, num2);
+        }
+        else if(operation == "sub"){
+            result = sub(num1, num2);
+        }
+        else if(operation == "mul"){
+            result = mul(num1, num2);
+        }
+        else if(operation == "div"){
+            result = div(num1, num2);
+        }
+        else{
+            result = "invalid operation";
+        }
+
+        resultElement.textContent = "Result"  + result;
+
+        }
+        
+    </script>
+
+        <label for="num1">first number</label>
+        <input type="number" id="num1"><br>
+        <label  for="num2">second number</label>
+        <input type="number" id="num2"><br>
+
+        <label for="operation">operation :</label>
+        <select name="operation" id="operation">
+        <option value="add">add</option>
+        <option value="sub">sub</option>
+        <option value="mul">mul</option>
+        <option value="div">div</option>
+        </select>
+        <button onclick="calc()">Answer: </button><br>
+        
+        <p id="result"></p>
+    
+
+</body>
+</html>
